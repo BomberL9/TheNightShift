@@ -157,7 +157,7 @@ function draw() {
     michael.x -= 7;
     michael.addImage("michael", michaelL);
   }
-  if(keyIsDown(UP_ARROW) && michael.y > 0){
+  if(keyIsDown(UP_ARROW) || keyIsDown(87) && michael.y > 0){
     michael.y -= 7;
   }
   if(keyIsDown(DOWN_ARROW) && michael.y < height){
@@ -381,7 +381,7 @@ function shootShock() {
     shock.velocityY = 0;
     shock.x = michael.x-20;
     michael.addImage("michael", michaelShootingL);
-  }else if(keyIsDown(UP_ARROW)){
+  }else if(keyIsDown(UP_ARROW) || keyIsDown(87)){
     shock.velocityX = 0;
     shock.velocityY = -30;
   }else if(keyIsDown(DOWN_ARROW)){
